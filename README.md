@@ -14,8 +14,6 @@ Some of the implemented operations include:
 5. Export of Information Reports
 and much more.
 
-The project was made as part of my academic degree, in a group setting.
-
 In order to operate:
 1. Link the SQL files to MySQL software.
 2. Connect via server jar file
