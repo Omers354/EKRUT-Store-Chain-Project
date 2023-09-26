@@ -15,7 +15,7 @@ Some of the implemented operations include:
 and much more.
 
 In order to operate:
-1. Link the SQL files to MySQL software.
+1. Link the SQL files located in the JAR folder to MySQL software.
 2. Connect via server jar file
 3. Connect via client jar file
 4. Play
