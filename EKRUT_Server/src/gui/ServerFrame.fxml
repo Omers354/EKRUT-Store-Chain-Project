@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="800.0" style="-fx-background-color: #3D495640;" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="494.0" prefWidth="305.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <ImageView fx:id="ekrut_logo" fitHeight="180.0" fitWidth="179.0" layoutX="84.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fill="WHITE" layoutX="84.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to EKRUT" textAlignment="CENTER" wrappingWidth="130.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="18.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+ Status:" />
+            <Text fill="WHITE" layoutX="18.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+ Using EKRUT is under terms and conditions" />
+            <Text fill="WHITE" layoutX="18.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+ For any help, please call support" />
+            <Label layoutX="130.0" layoutY="61.0" text="Server" textAlignment="CENTER" textFill="WHITE" />
+            <Text fill="WHITE" layoutX="80.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About" />
+            <Label fx:id="status" layoutX="85.0" layoutY="196.0" text="Offline" textFill="#ff3131" />
+            <Button alignment="CENTER" layoutX="70.0" layoutY="100.0" mnemonicParsing="false" onAction="#getAboutBtn" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #3D4956;">
+               <graphic>
+                  <ImageView fx:id="about_logo" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" />
+               </graphic>
+            </Button>
+            <Text fill="WHITE" layoutX="18.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+ Host/IP:" />
+            <Label fx:id="host_ip" layoutX="85.0" layoutY="226.0" text="Not Connected" textFill="#ff3131" />
+            <Button alignment="CENTER" layoutX="170.0" layoutY="100.0" mnemonicParsing="false" onAction="#getImportBtn" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #3D4956;">
+               <graphic>
+                  <ImageView fx:id="import_users_logo" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" />
+               </graphic>
+            </Button>
+            <Text fill="WHITE" layoutX="180.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Import" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="745.0" layoutY="14.0" mnemonicParsing="false" onAction="#getExitBtn" prefHeight="37.0" prefWidth="43.0" style="-fx-background-color: #3D4956; -fx-background-radius: 5em;" text="X" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="connect_btn" layoutX="695.0" layoutY="443.0" mnemonicParsing="false" onAction="#getConnectBtn" prefHeight="37.0" prefWidth="86.0" style="-fx-background-color: #3D4956; -fx-background-radius: 5em;" text="Connect" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Text fill="#3d4956" layoutX="490.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Text>
+      <Text layoutX="465.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2022-2023 EKRUT. All Rights Reserved." textAlignment="CENTER" wrappingWidth="185.78466796875" />
+      <Button fx:id="disconnect_btn" disable="true" layoutX="325.0" layoutY="443.0" mnemonicParsing="false" onAction="#getDisconnectBtn" prefHeight="37.0" prefWidth="86.0" style="-fx-background-color: #3D4956; -fx-background-radius: 5em;" text="Disconnect" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Text layoutX="400.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Port:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="400.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello! Please connect in order to start the server">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="port_field" layoutX="545.0" layoutY="240.0" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="5555" />
+      <Text layoutX="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Database">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="db_name" layoutX="545.0" layoutY="120.0" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="ekrut" />
+      <Text layoutX="400.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Database Name:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="400.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MySQL Username:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="db_username" layoutX="545.0" layoutY="160.0" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="root" />
+      <Text layoutX="400.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MySQL Password:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="db_password" layoutX="545.0" layoutY="200.0" prefHeight="20.0" prefWidth="150.0" text="Aa123456" />
+      <TextArea fx:id="message_to_gui" layoutX="355.0" layoutY="310.0" prefHeight="120.0" prefWidth="390.0" />
+      <Text layoutX="400.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Console:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Label layoutX="200.0" layoutY="257.0" text=": +972522491320" textFill="WHITE" />
+   </children>
+</AnchorPane>
